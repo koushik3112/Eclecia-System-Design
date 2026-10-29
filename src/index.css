@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, sans-serif;
+  color: #F4EBDD;
+  background: #09151D;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+body { margin: 0; min-width: 320px; background: #09151D; }
+button, a { -webkit-tap-highlight-color: transparent; }
+::selection { background: #C18B43; color: #09151D; }
+.gold-rule { height: 1px; background: linear-gradient(90deg, transparent, #C18B43aa, transparent); }
+.pattern-bg {
+  background-image:
+    radial-gradient(circle at 20% 20%, #C18B4310 0, transparent 30%),
+    radial-gradient(circle at 90% 10%, #14504d22 0, transparent 28%),
+    linear-gradient(135deg, #09151D, #0b1921 65%, #09151D);
+}
+.gold-text {
+  background: linear-gradient(110deg, #f4d69c 0%, #bd8135 40%, #f1c97e 62%, #9d6427 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.panel {
+  border: 1px solid rgba(193,139,67,.3);
+  background: rgba(18,33,42,.82);
+  box-shadow: 0 18px 60px rgba(0,0,0,.14);
+}
+.ornament {
+  background-image: repeating-linear-gradient(45deg, transparent 0 12px, rgba(193,139,.04) 12px 13px);
+}
+.focus-ring:focus-visible { outline: 3px solid #F4EBDD; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
